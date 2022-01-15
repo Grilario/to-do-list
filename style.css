@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #0b0c09;
+  color: #c9c9c9;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background: none;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+svg {
+  fill: #b8b8b8;
+  pointer-events: none;
+}
+
+.main-header {
+  width: 100%;
+  height: 60px;
+  padding: 0 2rem;
+
+  display: flex;
+  align-items: center;
+}
+
+.main-header h1 {
+  font-size: 2.6rem;
+  font-weight: 500;
+}
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.container .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid #b8b8b8;
+  padding-bottom: 1.6rem;
+}
+
+.container .header span {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.add-to-do-btn {
+  border-radius: 50%;
+  background-color: #1f1f1f;
+}
+
+.add-to-do-btn svg {
+  width: 4rem;
+  height: 4rem;
+}
+
+#to-do-list {
+  margin-top: 2rem;
+  padding: 0 2rem;
+}
+
+.to-do {
+  width: 100%;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+}
+
+.to-do p {
+  width: 100%;
+  margin: 0 1.5rem;
+  outline: none;
+
+  font-size: 1.8rem;
+  font-weight: 400;
+}
+
+.btn-delete-to-do {
+  border: none;
+  background: none;
+
+  cursor: pointer;
+  opacity: 0;
+
+  transition: 300ms;
+}
+
+.btn-delete-to-do:hover {
+  opacity: 100;
+}
+
+.btn-delete-to-do svg {
+  width: 20px;
+  height: 20px;
+}
+
+.checkbox {
+  width: 1.8rem;
+  height: 1.8rem;
+  border: 2px solid #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition: background 200ms linear;
+}
+
+.checkbox svg {
+  width: 1.4rem;
+  height: 1.4rem;
+  fill: #ffffff;
+
+  display: none;
+}
+
+.to-do.check .checkbox {
+  background: #2eaadc;
+  border: none;
+}
+
+.to-do.check .checkbox svg {
+  display: initial;
+}
+
+.to-do.check p {
+  text-decoration: line-through;
+  opacity: 65%;
+}
