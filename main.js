@@ -141,3 +141,7 @@ function generateUUID() {
     ).toString(16)
   );
 }
+
+if('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./sw.js')
+}
