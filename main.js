@@ -74,7 +74,7 @@ function saveToDo(toDo) {
 function createNewToDo() {
   connectionToDatabase().connected = (toDoList) => {
     const request = toDoList.add({
-      uuid: crypto.randomUUID(),
+      uuid: generateUUID(),
       isCheck: false,
       text: "",
       date: Date.now(),
@@ -132,3 +132,12 @@ document.addEventListener("DOMContentLoaded", () => {
     };
   };
 });
+
+function generateUUID() {
+  return ([1e7] + -1e3 + -4e3 + -8e3 + -1e11).replace(/[018]/g, (c) =>
+    (
+      c ^
+      (crypto.getRandomValues(new Uint8Array(1))[0] & (15 >> (c / 4)))
+    ).toString(16)
+  );
+}
