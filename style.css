@@ -48,6 +48,7 @@ svg {
   width: 100%;
   max-width: 1100px;
   margin: 0 auto;
+  padding: 0 2rem;
 }
 
 .container .header {
@@ -94,6 +95,7 @@ svg {
 
   font-size: 1.8rem;
   font-weight: 400;
+  word-break: break-all;
 }
 
 .btn-delete-to-do {
@@ -106,7 +108,7 @@ svg {
   transition: 300ms;
 }
 
-.btn-delete-to-do:hover {
+.to-do:hover .btn-delete-to-do {
   opacity: 100;
 }
 
